@@ -6,13 +6,16 @@ print(os.getcwd())
 
 if not os.path.exists(dir):
     os.mkdir(dir)
-if not os.path.exists(f'{dir}/blank'): 
-    os.mkdir(f'{dir}/blank')
 
 for i in range (65,91):
     letter = chr(i)
     if not os.path.exists(f'{dir}/{letter}'):
         os.mkdir(f'{dir}/{letter}')
+        
+if not os.path.exists(f'{dir}/blank'): 
+    os.mkdir(f'{dir}/blank')
+
+
 
 import os
 import cv2
