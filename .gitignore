@@ -1,0 +1,19 @@
+# Exclude app.py
+app.py
+
+# Exclude fyp-sign-language-detection directory
+fyp-sign-language-detection/
+
+# Exclude node_modules directory
+node_modules/
+
+# Exclude package-lock.json and package.json
+package-lock.json
+package.json
+
+# Exclude sign_language_detection_model2.json
+sign_language_detection_model2.json
+
+# Exclude sign_language_model2.keras
+sign_language_model2.keras
+
