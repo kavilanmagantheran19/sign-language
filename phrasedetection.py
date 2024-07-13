@@ -8,11 +8,11 @@ from transformers import AlbertTokenizer
 tokenizer = AlbertTokenizer.from_pretrained("albert-base-v2")
 
 # Load the sign language model
-json_file = open("sign_language_detection_model.json", "r")
+json_file = open("sign_language_detection_model2.json", "r")
 model_json = json_file.read()
 json_file.close()
 model = model_from_json(model_json)
-model.load_weights("sign_language_model.keras")
+model.load_weights("sign_language_model2.keras")
 
 # Extract features
 def extract_features(image):
@@ -22,7 +22,7 @@ def extract_features(image):
 
 # Initialize video capture and labels
 cap = cv2.VideoCapture(0)
-label = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+label = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z','blank']
 sequence = ""  # To store the sequence of recognized letters
 last_prediction = ""
 same_count = 0
